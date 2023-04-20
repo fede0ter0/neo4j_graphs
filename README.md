@@ -1,10 +1,10 @@
-# Data Engineering Coding Challenge
+# Neo4J Database
 
-To solve this challenge, I have followed these steps:
+For this initial commit, I followed these steps:
 
 - I'm using an Airflow Docker image. I made few changes in the `docker-compose.yaml`, in order to install additional requirements and add some folders.
 - I'm using the Neo4j Docker image suggested in the neo4j documentation. 
-- I worked based on the suggested model of proteins.
+- I worked based on a model of proteins.
 - I created a json dictionary in the path `schemas/docker-compose.yaml`. Its structure lets us parse the xml file, getting the nodes and relationships.
 At the moment, I only coded the functions to parse and write the nodes, but the ones that write the relationships of the graph would be similar.
 - For now, I tried to be pragmatic, so I didn't focus on a high quality design of the code (i.e., I didn't write different classes, I just put everything
@@ -19,4 +19,3 @@ the Neo4j instance.
 - Airflow webserver will be available at `http://localhost:8080/home`. Also, Neo4j service interface will be at `http://localhost:7474`.
 - In the Airflow UI, it should appear the DAG `dag_uniprot`. It can be ran manually, and should take some seconds to finish. After that, you can get into the 
 Neo4j browser and type `MATCH (n) RETURN n;`. That will show every graph in the database. You should see two different types of nodes: `proteins` and `genes`.
-That is what I have implemented for now.
