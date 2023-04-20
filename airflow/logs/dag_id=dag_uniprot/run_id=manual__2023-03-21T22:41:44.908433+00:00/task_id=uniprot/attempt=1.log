@@ -1,0 +1,28 @@
+[2023-03-21T22:41:45.872+0000] {taskinstance.py:1084} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: dag_uniprot.uniprot manual__2023-03-21T22:41:44.908433+00:00 [queued]>
+[2023-03-21T22:41:45.879+0000] {taskinstance.py:1084} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: dag_uniprot.uniprot manual__2023-03-21T22:41:44.908433+00:00 [queued]>
+[2023-03-21T22:41:45.879+0000] {taskinstance.py:1282} INFO - 
+--------------------------------------------------------------------------------
+[2023-03-21T22:41:45.880+0000] {taskinstance.py:1283} INFO - Starting attempt 1 of 1
+[2023-03-21T22:41:45.881+0000] {taskinstance.py:1284} INFO - 
+--------------------------------------------------------------------------------
+[2023-03-21T22:41:45.890+0000] {taskinstance.py:1303} INFO - Executing <Task(PythonOperator): uniprot> on 2023-03-21 22:41:44.908433+00:00
+[2023-03-21T22:41:45.895+0000] {standard_task_runner.py:55} INFO - Started process 140 to run task
+[2023-03-21T22:41:45.899+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'dag_uniprot', 'uniprot', 'manual__2023-03-21T22:41:44.908433+00:00', '--job-id', '35', '--raw', '--subdir', 'DAGS_FOLDER/dag_uniprot.py', '--cfg-path', '/tmp/tmp7aho3ux2']
+[2023-03-21T22:41:45.901+0000] {standard_task_runner.py:83} INFO - Job 35: Subtask uniprot
+[2023-03-21T22:41:45.958+0000] {task_command.py:388} INFO - Running <TaskInstance: dag_uniprot.uniprot manual__2023-03-21T22:41:44.908433+00:00 [running]> on host 74af05964be6
+[2023-03-21T22:41:46.014+0000] {taskinstance.py:1511} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=dag_uniprot
+AIRFLOW_CTX_TASK_ID=uniprot
+AIRFLOW_CTX_EXECUTION_DATE=2023-03-21T22:41:44.908433+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2023-03-21T22:41:44.908433+00:00
+[2023-03-21T22:41:46.021+0000] {logging_mixin.py:137} INFO - lets see the query
+[2023-03-21T22:41:46.022+0000] {logging_mixin.py:137} INFO - CREATE (foxa2:Gene {name: 'FOXA2'})
+CREATE (hnf3b:Gene {name: 'HNF3B'})
+CREATE (tcf3b:Gene {name: 'TCF3B'})
+CREATE (foxa2_human:Protein {name: 'FOXA2_HUMAN'})
+[2023-03-21T22:41:46.047+0000] {python.py:177} INFO - Done. Returned value was: None
+[2023-03-21T22:41:46.057+0000] {taskinstance.py:1326} INFO - Marking task as SUCCESS. dag_id=dag_uniprot, task_id=uniprot, execution_date=20230321T224144, start_date=20230321T224145, end_date=20230321T224146
+[2023-03-21T22:41:46.111+0000] {local_task_job.py:212} INFO - Task exited with return code 0
+[2023-03-21T22:41:46.132+0000] {taskinstance.py:2585} INFO - 0 downstream tasks scheduled from follow-on schedule check

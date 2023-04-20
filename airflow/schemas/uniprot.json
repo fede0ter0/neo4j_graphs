@@ -1,0 +1,45 @@
+{
+	"nodes": [
+		{
+			"gene": {
+				"node_location": "uniprot.entry.gene.name",
+				"properties": [
+					{
+						"label": "name",
+						"property_location": "uniprot.entry.gene.name",
+						"property_sub_location": "#text"
+					}
+				]
+			}
+		},
+		{
+			"protein": {
+				"node_location": "uniprot.entry.protein",
+				"properties": [
+					{
+						"label": "name",
+						"property_location": "uniprot.entry.name"
+					}
+				]
+			}
+		}
+	],
+	"relationships": [
+		{
+			"label": "HAS_FULL_NAME",
+			"node1": "protein",
+			"node2": "fullName"
+		},
+		{
+			"label": "FROM_GENE",
+			"node1": "protein",
+			"node2": "gene",
+			"properties": [
+				{
+					"label": "status",
+					"property_location": "uniprot.entry.gene.name.@type"
+				}
+			]
+		}
+	]
+}
